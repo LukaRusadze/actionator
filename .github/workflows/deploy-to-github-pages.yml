@@ -12,6 +12,7 @@ jobs:
   deploy:
     needs: build
     permissions:
+      contents: read
       pages: write
       id-token: write
 
@@ -23,6 +24,5 @@ jobs:
 
     steps:
       - name: Deploy
+        id: deployment
         uses: actions/deploy-pages@v2
-        with:
-          artifact_name: whateverthefuckthisisartifact
