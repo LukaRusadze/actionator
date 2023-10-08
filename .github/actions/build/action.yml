@@ -13,3 +13,7 @@ runs:
     - name: Build
       shell: bash
       run: npm run build
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        path: "./build"
