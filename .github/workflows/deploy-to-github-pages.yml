@@ -10,6 +10,7 @@ jobs:
         uses: "./.github/actions/build"
 
   deploy:
+    needs: build
     permissions:
       pages: write
       id-token: write
