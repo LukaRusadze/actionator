@@ -3,5 +3,9 @@ description: Deploy the project to GitHub Pages
 runs:
   using: "composite"
   steps:
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        path: "./build"
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v2
