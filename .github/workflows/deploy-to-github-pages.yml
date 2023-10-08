@@ -4,5 +4,9 @@ jobs:
   deploy-to-github-pages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: "./.github/actions/deploy-to-github-pages"
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        uses: "./.github/actions/build"
+      - name: Deploy
+        uses: "./.github/actions/deploy"
