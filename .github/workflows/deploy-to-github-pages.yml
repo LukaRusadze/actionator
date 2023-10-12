@@ -4,8 +4,9 @@ defaults:
   run:
     working-directory: frontend
 jobs:
-  build:
+  Deploy to DigitalOcean:
     runs-on: ubuntu-latest
+    environment: digitalocean
     steps:
       - name: Checkout
         uses: actions/checkout@v2
