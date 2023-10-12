@@ -26,8 +26,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: frontend
-          file: frontend/Dockerfile
           push: true
           tags: lukarusadze/actionator:latest
       - name: Deploy to DigitalOcean App Platform
