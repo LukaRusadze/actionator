@@ -4,9 +4,8 @@ defaults:
   run:
     working-directory: frontend
 jobs:
-  deploy-to-digitalocean:
+  build:
     runs-on: ubuntu-latest
-    environment: digitalocean
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -14,6 +13,11 @@ jobs:
         uses: "./.github/actions/build"
         with:
           working-directory: frontend
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: digitalocean
+    steps:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
@@ -29,4 +33,4 @@ jobs:
         uses: digitalocean/app_action@v1.1.5
         with:
           app_name: lukarusadze-actionator
-          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+          token: ${{ secrets.TOKEN }}
