@@ -4,6 +4,7 @@ runs:
   using: "composite"
   steps:
     - name: Echo current directory
+      shell: bash
       run: echo "$PWD"
     - name: Setup node
       uses: actions/setup-node@v3
