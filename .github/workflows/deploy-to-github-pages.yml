@@ -1,5 +1,8 @@
 name: Deploy to GitHub Pages
 on: [push]
+defaults:
+  run:
+    working-directory: frontend
 jobs:
   build:
     runs-on: ubuntu-latest
