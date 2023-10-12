@@ -4,7 +4,7 @@ defaults:
   run:
     working-directory: frontend
 jobs:
-  Deploy to DigitalOcean:
+  deploy-to-digitalocean:
     runs-on: ubuntu-latest
     environment: digitalocean
     steps:
