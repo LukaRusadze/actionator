@@ -13,7 +13,7 @@ export default function Home() {
     <main className="flex justify-center w-screen min-h-screen items-center flex-col">
       <h1 className="text-2xl font-bold">{counter}</h1>
       <Button onClick={onClick}>Whatever this is</Button>
-      <h1>Hello</h1>
+      <h1>Hello Hello</h1>
     </main>
   );
 }

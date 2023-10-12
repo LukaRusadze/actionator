@@ -28,5 +28,5 @@ jobs:
       - name: Deploy to DigitalOcean App Platform
         uses: digitalocean/app_action@v1.1.5
         with:
-          app_name: dolphin-app
+          app_name: whatever-the-fuck-this-is
           token: ${{ secrets.TOKEN }}
