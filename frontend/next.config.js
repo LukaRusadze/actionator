@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: "build",
-  output: "export",
-  basePath: "/actionator",
-  assetPrefix: "/actionator/",
+  output: "standalone",
 };
 
 module.exports = nextConfig;
