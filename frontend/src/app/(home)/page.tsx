@@ -10,7 +10,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex justify-center w-screen min-h-screen items-center">
+    <main className="flex justify-center w-screen min-h-screen items-center flex-col">
       <h1 className="text-2xl font-bold">{counter}</h1>
       <Button onClick={onClick}>Whatever this is</Button>
     </main>
