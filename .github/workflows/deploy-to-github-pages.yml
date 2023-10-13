@@ -8,12 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: digitalocean
     steps:
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: "20"
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Build
         uses: "./.github/actions/build"
         with:
